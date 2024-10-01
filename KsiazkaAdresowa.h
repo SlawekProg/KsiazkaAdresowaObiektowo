@@ -12,5 +12,6 @@ class KsiazkaAdresowa
 public:
 	void rejestracjaUzytkownika();
 	void wypiszWszystkichUzytkownikow();
+	KsiazkaAdresowa();
 };
 #endif

@@ -6,6 +6,7 @@
 #include <windows.h>
 #include <fstream>
 #include <sstream>
+#include <cstdlib>
 
 #include "Uzytkownik.h"
 #include "MetodyPomocnicze.h"
@@ -14,6 +15,7 @@ using namespace std;
 
 class PlikiZUzytkownikami
 {
+
 	fstream plikTekstowy;
 	string nazwaPlikuZUzytkownikami;
 	bool czyPlikJestPusty();
@@ -21,6 +23,8 @@ class PlikiZUzytkownikami
 public:
 	void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
 	PlikiZUzytkownikami();
+	vector <Uzytkownik> wczytajUzytkownikowZPliku();
+	Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
 };
 #endif
