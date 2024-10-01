@@ -1,13 +1,9 @@
 
 # include "PlikiZUzytkownikami.h"
 
-PlikiZUzytkownikami::PlikiZUzytkownikami()
-{
-    nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
-}
-
 bool PlikiZUzytkownikami::czyPlikJestPusty()
 {
+    fstream plikTekstowy;
     plikTekstowy.seekg(0, ios::end);
     if (plikTekstowy.tellg() == 0)
         return true;
@@ -16,6 +12,7 @@ bool PlikiZUzytkownikami::czyPlikJestPusty()
 }
 void PlikiZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
+    fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
     plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::app);
 
@@ -48,6 +45,7 @@ string PlikiZUzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowy
 }
 vector <Uzytkownik> PlikiZUzytkownikami::wczytajUzytkownikowZPliku()
 {
+    fstream plikTekstowy;
     Uzytkownik uzytkownik;
     vector <Uzytkownik> uzytkownicy;
     string daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
