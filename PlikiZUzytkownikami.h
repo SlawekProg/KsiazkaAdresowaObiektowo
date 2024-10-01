@@ -15,14 +15,12 @@ using namespace std;
 
 class PlikiZUzytkownikami
 {
-
-	fstream plikTekstowy;
-	string nazwaPlikuZUzytkownikami;
+	const string nazwaPlikuZUzytkownikami;
 	bool czyPlikJestPusty();
 	string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
 public:
 	void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
-	PlikiZUzytkownikami();
+	PlikiZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI):nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI) {};
 	vector <Uzytkownik> wczytajUzytkownikowZPliku();
 	Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
