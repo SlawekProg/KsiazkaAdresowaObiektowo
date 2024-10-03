@@ -23,6 +23,5 @@ public:
 	PlikiZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI):nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI) {};
 	vector <Uzytkownik> wczytajUzytkownikowZPliku();
 	Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
-
 };
 #endif

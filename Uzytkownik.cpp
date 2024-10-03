@@ -17,6 +17,7 @@ void Uzytkownik::ustawHaslo(string noweHaslo)
 	haslo = noweHaslo;
 }
 
+
 int Uzytkownik::pobierzId()
 {
 	return id;
