@@ -17,11 +17,12 @@ class PlikiZUzytkownikami
 {
 	const string nazwaPlikuZUzytkownikami;
 	bool czyPlikJestPusty();
-	string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
 public:
+	string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
 	void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
 	PlikiZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI):nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI) {};
 	vector <Uzytkownik> wczytajUzytkownikowZPliku();
 	Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
+	string pobierzNazwePliku();
 };
 #endif
