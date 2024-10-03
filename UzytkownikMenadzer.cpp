@@ -1,4 +1,12 @@
 # include "UzytkownikMenadzer.h"
+void UzytkownikMenadzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
+{
+    idZalogowanegoUzytkownika = noweIdZalogowanegoUzytkownika;
+}
+int UzytkownikMenadzer::pobierzIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
+}
 
 void UzytkownikMenadzer::rejestracjaUzytkownika()
 {
@@ -92,4 +100,52 @@ int UzytkownikMenadzer::logowanieUzytkownika()
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
     return 0;
+}
+void UzytkownikMenadzer::zapiszWszystkichUzytkownikowDoPliku()
+{
+    fstream plikTekstowy;
+    string liniaZDanymiUzytkownika = "";
+    vector <Uzytkownik>::iterator itrKoniec = --uzytkownicy.end();
+    string nazwaPlikuZUzytkownikami = plikZUzytkownikami.pobierzNazwePliku();
+    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::out);
+
+    if (plikTekstowy.good() == true)
+    {
+        for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+        {
+            liniaZDanymiUzytkownika = plikZUzytkownikami.zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(*itr);
+
+            if (itr == itrKoniec)
+            {
+                plikTekstowy << liniaZDanymiUzytkownika;
+            }
+            else
+            {
+                plikTekstowy << liniaZDanymiUzytkownika << endl;
+            }
+            liniaZDanymiUzytkownika = "";
+        }
+    }
+    else
+    {
+        cout << "Nie mozna otworzyc pliku " << nazwaPlikuZUzytkownikami << endl;
+    }
+    plikTekstowy.close();
+}
+void UzytkownikMenadzer::zmianaHaslaZalogowanegoUzytkownika()
+{
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    noweHaslo = MetodyPomocnicze::wczytajLinie();
+
+    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+    {
+        if (itr->pobierzId() == idZalogowanegoUzytkownika)
+        {
+            itr->ustawHaslo(noweHaslo);
+            cout << "Haslo zostalo zmienione." << endl << endl;
+            system("pause");
+        }
+    }
+    zapiszWszystkichUzytkownikowDoPliku();
 }

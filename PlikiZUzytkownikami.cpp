@@ -1,6 +1,11 @@
 
 # include "PlikiZUzytkownikami.h"
 
+string PlikiZUzytkownikami::pobierzNazwePliku()
+{
+    return nazwaPlikuZUzytkownikami;
+}
+
 bool PlikiZUzytkownikami::czyPlikJestPusty()
 {
     fstream plikTekstowy;

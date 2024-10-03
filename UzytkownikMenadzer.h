@@ -15,18 +15,22 @@ using namespace std;
 
 class UzytkownikMenadzer
 {
-	int idZalogowanegoUzytkownika;
+	
 	vector <Uzytkownik> uzytkownicy;
 	Uzytkownik podajDaneNowegoUzytkownika();
 	int pobierzIdNowegoUzytkownika();
 	bool czyIstniejeLogin(string login);
 	PlikiZUzytkownikami plikZUzytkownikami;
-
+	int idZalogowanegoUzytkownika;
 public:
 	UzytkownikMenadzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami) {};
 	void rejestracjaUzytkownika();
 	void wypiszWszystkichUzytkownikow();
 	void wczytajUzytkownikowZPliku();
 	int logowanieUzytkownika();
+	void zmianaHaslaZalogowanegoUzytkownika();
+	void ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika);
+	int pobierzIdZalogowanegoUzytkownika();
+	void zapiszWszystkichUzytkownikowDoPliku();
 };
 #endif

@@ -16,5 +16,6 @@ public:
 	KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) :uzytkownikMenadzer(nazwaPlikuZUzytkownikami)
 	{ uzytkownikMenadzer.wczytajUzytkownikowZPliku(); };
 	int logowanieUzytkownika();
+	void zmianaHaslaZalogowanegoUzytkownika();
 };
 #endif
