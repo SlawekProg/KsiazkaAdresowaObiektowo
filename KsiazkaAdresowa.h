@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "UzytkownikMenadzer.h"
+#include "AdresatMenadzer.h"
 
 using namespace std;
 
@@ -14,5 +15,6 @@ public:
 	void wypiszWszystkichUzytkownikow();
 	KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) :uzytkownikMenadzer(nazwaPlikuZUzytkownikami)
 	{ uzytkownikMenadzer.wczytajUzytkownikowZPliku(); };
+	int logowanieUzytkownika();
 };
 #endif
