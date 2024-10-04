@@ -149,3 +149,9 @@ void UzytkownikMenadzer::zmianaHaslaZalogowanegoUzytkownika()
     }
     zapiszWszystkichUzytkownikowDoPliku();
 }
+void UzytkownikMenadzer::wylogujUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+    uzytkownicy.clear();
+    cout << "Uzytkownik zosta³ wylogowany" << endl;
+}
