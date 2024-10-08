@@ -3,7 +3,7 @@
 #define UZYTKOWNIK_H
 
 #include <iostream>
-#include <vector>
+
 
 using namespace std;
 
@@ -19,7 +19,6 @@ public:
 	void ustawLogin(string nowyLogin);
 	void ustawHaslo(string noweHaslo);
 	
-
 	int pobierzId();
 	string pobierzLogin();
 	string pobierzHaslo();
