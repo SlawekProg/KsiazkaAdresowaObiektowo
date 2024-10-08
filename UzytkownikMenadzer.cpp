@@ -28,12 +28,12 @@ Uzytkownik UzytkownikMenadzer::podajDaneNowegoUzytkownika()
     do
     {
         cout << "Podaj login: ";
-        cin >> login;
+        login = MetodyPomocnicze::wczytajLinie();
         uzytkownik.ustawLogin(login);
     } while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
 
     cout << "Podaj haslo: ";
-    cin >> haslo;
+    haslo = MetodyPomocnicze::wczytajLinie();
     uzytkownik.ustawHaslo(haslo);
 
     return uzytkownik;
@@ -88,7 +88,9 @@ int UzytkownikMenadzer::logowanieUzytkownika()
                 {
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    return itr->pobierzId();
+                    ustawIdZalogowanegoUzytkownika(itr->pobierzId());
+            
+                    return idZalogowanegoUzytkownika;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
@@ -152,6 +154,5 @@ void UzytkownikMenadzer::zmianaHaslaZalogowanegoUzytkownika()
 void UzytkownikMenadzer::wylogujUzytkownika()
 {
     idZalogowanegoUzytkownika = 0;
-    uzytkownicy.clear();
-    cout << "Uzytkownik zosta³ wylogowany" << endl;
+    cout << "Uzytkownik zostal wylogowany" << endl;
 }
