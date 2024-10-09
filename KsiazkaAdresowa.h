@@ -15,11 +15,8 @@ class KsiazkaAdresowa
 public:
 	KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
 		: uzytkownikMenadzer(nazwaPlikuZUzytkownikami),
-		adresatMenadzer(nazwaPlikuZAdresatami)
-	{
-		uzytkownikMenadzer.wczytajUzytkownikowZPliku();
-	}
-
+		adresatMenadzer(nazwaPlikuZAdresatami){}
+		
 	void rejestracjaUzytkownika();
 	void wypiszWszystkichUzytkownikow();
 	void logowanieUzytkownika();
