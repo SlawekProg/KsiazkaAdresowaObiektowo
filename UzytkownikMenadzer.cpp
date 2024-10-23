@@ -84,7 +84,7 @@ int UzytkownikMenadzer::logowanieUzytkownika()
                 {
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    ustawIdZalogowanegoUzytkownika(itr->pobierzId());
+                    idZalogowanegoUzytkownika = itr->pobierzId();
             
                     return idZalogowanegoUzytkownika;
                 }
@@ -151,4 +151,11 @@ void UzytkownikMenadzer::wylogujUzytkownika()
 {
     idZalogowanegoUzytkownika = 0;
     cout << "Uzytkownik zostal wylogowany" << endl;
+}
+bool UzytkownikMenadzer::czyUzytkownikJestZalogowany()
+{
+    if (idZalogowanegoUzytkownika > 0)
+        return true;
+    else
+        return false;
 }

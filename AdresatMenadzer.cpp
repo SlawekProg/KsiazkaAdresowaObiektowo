@@ -5,30 +5,13 @@
 
 using namespace std;
 
-void AdresatMenadzer::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika)
-{
-    idZalogowanegoUzytkownika = noweIdZalogowanegoUzytkownika;
-    plikZAdresatami.ustawIdZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
-}
-int AdresatMenadzer::pobierzIdZalogowanegoUzytkownika()
-{
-    return idZalogowanegoUzytkownika;
-}
-void AdresatMenadzer::wyczyscVectorAdresaci()
-{
-    idZalogowanegoUzytkownika = 0;
-    adresaci.clear();
-}
-
-
-
 Adresat AdresatMenadzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
     int idAdresata = plikZAdresatami.pobierzIdIstatniegoAdresata();
 
     adresat.ustawId(++idAdresata);
-    adresat.ustawIdUzytkownika(pobierzIdZalogowanegoUzytkownika());
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());
@@ -61,13 +44,9 @@ void AdresatMenadzer::dodawanieNowegoAdresata()
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
 }
-void AdresatMenadzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku()
-{
-  adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
-}
 void AdresatMenadzer::wyswietlDaneAdresata(Adresat adresat)
 {
-    cout << endl << "Id:                 " << adresat.pobierzId() << endl;
+    cout << endl << "Id:         " << adresat.pobierzId() << endl;
     cout << "Imie:               " << adresat.pobierzImie() << endl;
     cout << "Nazwisko:           " << adresat.pobierzNazwisko() << endl;
     cout << "Numer telefonu:     " << adresat.pobierzNumerTelefonu() << endl;
