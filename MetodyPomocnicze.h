@@ -20,5 +20,6 @@ public:
 	static bool czyPlikJestPusty();
 	static int konwersjaStringNaInt(string liczba);
 	static string pobierzLiczbe(string tekst, int pozycjaZnaku);
+	static int wczytajLiczbeCalkowita();
 };
 #endif
