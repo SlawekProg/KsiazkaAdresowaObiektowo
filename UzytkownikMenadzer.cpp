@@ -152,10 +152,3 @@ void UzytkownikMenadzer::wylogujUzytkownika()
     idZalogowanegoUzytkownika = 0;
     cout << "Uzytkownik zostal wylogowany" << endl;
 }
-bool UzytkownikMenadzer::czyUzytkownikJestZalogowany()
-{
-    if (idZalogowanegoUzytkownika > 0)
-        return true;
-    else
-        return false;
-}
