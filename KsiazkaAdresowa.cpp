@@ -45,3 +45,7 @@ bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
 			return false;
 	}
 }
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+	adresatMenadzer->wyszukajAdresatowPoImieniu();
+}

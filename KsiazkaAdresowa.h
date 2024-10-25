@@ -33,5 +33,6 @@ public:
 
 	void dodawanieNowegoAdresata();
 	void wyswietlWszystkichAdresatow();
+	void wyszukajAdresatowPoImieniu();
 };
 #endif

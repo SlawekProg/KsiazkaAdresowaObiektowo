@@ -42,7 +42,7 @@ int main()
 				wybor = MetodyPomocnicze::wczytajLiczbeCalkowita();
 
 				if (wybor == 1) ksiazkaAdresowa.dodawanieNowegoAdresata();
-				else if (wybor == 2);	//wyszukiwanieOsobyPoImieniu(osoby);
+				else if (wybor == 2) ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
 				else if (wybor == 3);	//wyszukiwanieOsobyPoNazwisku(osoby);
 				else if (wybor == 4) ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 				else if (wybor == 5);	 //edycjaUtworzonegoWpisuPoId(osoby);

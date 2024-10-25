@@ -20,6 +20,7 @@ class AdresatMenadzer
 
 	Adresat podajDaneNowegoAdresata();
 	void wyswietlDaneAdresata(Adresat adresat);
+	void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 public:
 	AdresatMenadzer(string nazwaPlikuZAdresatami = "", int idZalogowanegoUzytkownika = 0)
 		: ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika), plikZAdresatami(nazwaPlikuZAdresatami, ID_ZALOGOWANEGO_UZYTKOWNIKA)
@@ -28,6 +29,7 @@ public:
 	}
 	void dodawanieNowegoAdresata();
 	void wyswietlWszystkichAdresatow();
+	void wyszukajAdresatowPoImieniu();
 };
 
 #endif
