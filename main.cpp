@@ -43,7 +43,7 @@ int main()
 
 				if (wybor == 1) ksiazkaAdresowa.dodawanieNowegoAdresata();
 				else if (wybor == 2) ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
-				else if (wybor == 3);	//wyszukiwanieOsobyPoNazwisku(osoby);
+				else if (wybor == 3) ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
 				else if (wybor == 4) ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 				else if (wybor == 5);	 //edycjaUtworzonegoWpisuPoId(osoby);
 				else if (wybor == 6);	 //usuwanieWpisu(osoby);

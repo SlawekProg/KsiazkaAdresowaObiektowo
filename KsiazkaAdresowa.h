@@ -34,5 +34,6 @@ public:
 	void dodawanieNowegoAdresata();
 	void wyswietlWszystkichAdresatow();
 	void wyszukajAdresatowPoImieniu();
+	void wyszukajAdresatowPoNazwisku();
 };
 #endif
