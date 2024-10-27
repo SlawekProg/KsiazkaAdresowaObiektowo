@@ -45,7 +45,7 @@ int main()
 				else if (wybor == 2) ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
 				else if (wybor == 3) ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
 				else if (wybor == 4) ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-				else if (wybor == 5);	 //edycjaUtworzonegoWpisuPoId(osoby);
+				else if (wybor == 5) ksiazkaAdresowa.edytujAdresata();
 				else if (wybor == 6);	 //usuwanieWpisu(osoby);
 				else if (wybor == 7) ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
 				else if (wybor == 8) ksiazkaAdresowa.wylogujUzytkownika();

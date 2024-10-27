@@ -37,7 +37,6 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 }
 bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
 {
-	
 	{
 		if (uzytkownikMenadzer.pobierzIdZalogowanegoUzytkownika() > 0)
 			return true;
@@ -52,4 +51,8 @@ void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
 void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
 {
 	adresatMenadzer->wyszukajAdresatowPoNazwisku();
+}
+void KsiazkaAdresowa::edytujAdresata()
+{
+	adresatMenadzer->edytujAdresata();
 }
