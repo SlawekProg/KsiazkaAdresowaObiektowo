@@ -31,8 +31,9 @@ public:
 	Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
 	void dopiszAdresataDoPliku(Adresat adresat);
 	string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
-	int zwrocNumerLiniiSzukanegoAdresata(int idAdresata);
-	void edytujWybranaLinieWPliku(int numerEdytowanejLinii, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
+	void pobierzZPlikuIdOstatniegoAdresata();
+	void usunWybranegoAdresataZPliku(int idUsuwanegoAdresata);
+	void edytujDaneWybranegoAdresata(Adresat adresat);
 	
 	void ustawIdIstatniegoAdresata(int noweIdOstatniegoAdresata);
 	int pobierzIdIstatniegoAdresata();
