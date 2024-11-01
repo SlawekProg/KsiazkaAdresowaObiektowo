@@ -10,20 +10,20 @@
 
 #include "Uzytkownik.h"
 #include "MetodyPomocnicze.h"
+#include "PlikTekstowy.h"
 
 using namespace std;
 
-class PlikiZUzytkownikami
+class PlikiZUzytkownikami:public PlikTekstowy
 {
-	const string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
 	Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 	
 public:
 
-	PlikiZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI) :NAZWA_PLIKU_Z_UZYTKOWNIKAMI(NAZWAPLIKUZUZYTKOWNIKAMI) {};
+	PlikiZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI) :PlikTekstowy(NAZWAPLIKUZUZYTKOWNIKAMI) {};
 	string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
 	void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
 	vector <Uzytkownik> wczytajUzytkownikowZPliku();
-	string pobierzNazwePliku();
+	
 };
 #endif
